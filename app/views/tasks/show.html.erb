@@ -1,0 +1,21 @@
+<h1><%= @task.title %></h1>
+
+<div style="background-color: #ededed; padding: 10px 10px 10px 10px; width: 300px">
+<p><%= @task.details %></p>
+</div>
+
+<p><%= @task.completed %></p>
+
+<p>
+<%= link_to tasks_path do  %>
+  Return to list
+<% end %>
+</p>
+
+<p>
+<%= link_to edit_task_path do  %>
+  Edit
+<% end %>
+</p>
+
+

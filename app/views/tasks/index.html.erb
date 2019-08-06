@@ -1,5 +1,14 @@
 <h1>My Tasks</h1>
 <% @tasks.each do |task| %>
 <ul>
-<li><%=task%></li>
+<li>
+<%= link_to task.title, task_path(task) %>
+<%= link_to task_path(task), method: :delete do %>
+<i class="fas fa-trash">Remove</i>
+<%end %>
+<%= task.completed %>
+</li>
 </ul>
+<%end%>
+
+<%= link_to "Add Task", new_task_path  %>
